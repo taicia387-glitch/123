@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Контакти</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Контакти</h1>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="about.html">Про мене</a>
+      <a href="services.html">Послуги</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="contact.html">Контакти</a>
+      <a href="blog.html">Блог</a>
+      <a href="facts.html">Цікаві факти</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Моя контактна інформація</h2>
+      <p><strong>Email:</strong> myemail@example.com</p>
+      <p><strong>Телефон:</strong> +380 99 123 45 67</p>
+      <p><strong>Місто:</strong> Київ, Україна</p>
+    </section>
+
+    <section>
+      <h2>Напишіть мені</h2>
+      <form>
+        <label for="name">Ім’я:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Повідомлення:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Відправити</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Мій сайт</p>
+  </footer>
+</body>
+</html>
