@@ -35,3 +35,9 @@ footer {
   width: 100%;
   bottom: 0;
 }
+.logo {
+  width: 40px;     /* розмір картинки */
+  height: auto;    /* пропорційне масштабування */
+  margin-right: 10px; /* відступ справа від картинки */
+  vertical-align: middle; /* вирівнює картинку по середині тексту */
+}
