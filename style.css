@@ -1,3 +1,4 @@
+/* --- БАЗОВІ СТИЛІ --- */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,24 +7,66 @@ body {
   color: #333;
 }
 
+/* --- ХЕДЕР + МЕНЮ --- */
 header {
   background: #222;
   color: #fff;
   padding: 15px;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #f0c040;
 }
 
+/* --- КНОПКА БУРГЕР (прихована на великому екрані) --- */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+
+/* --- КОНТЕНТ --- */
 main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 20px;
+  gap: 20px;
+}
+
+/* --- КАРТКИ/БЛОКИ --- */
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 45%; /* дві колонки на великому екрані */
+  box-sizing: border-box;
+}
+
+section h2 {
+  margin-top: 0;
 }
 
 footer {
@@ -31,59 +74,49 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  margin-top: 30px;
 }
 
-/* --- Далі додаєш адаптивність --- */
+/* --- 📱 АДАПТИВНІСТЬ --- */
 
-/* 📱 Телефон (до 600px) */
-@media (max-width: 600px) {
+/* Телефон */
+@media (max-width: 700px) {
   nav {
-    display: flex;
+    display: none; /* спочатку сховано */
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  nav a {
+    padding: 10px 0;
+  }
+
+  nav.active {
+    display: flex; /* показується, коли натиснуто бургер */
+  }
+
+  .menu-toggle {
+    display: block; /* показати кнопку ☰ */
+  }
+
+  main {
     flex-direction: column;
     align-items: center;
   }
 
-  main {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  p {
-    font-size: 14px;
+  section {
+    width: 90%; /* одна колонка */
   }
 }
 
-/* 📲 Планшет (601px–1024px) */
-@media (min-width: 601px) and (max-width: 1024px) {
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  h1 {
-    font-size: 26px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-}
-
-/* 💻 Комп’ютер (1025px і більше) */
-@media (min-width: 1025px) {
-  h1 {
-    font-size: 32px;
-  }
-
-  p {
-    font-size: 18px;
+/* Планшет */
+@media (min-width: 701px) and (max-width: 1024px) {
+  section {
+    width: 80%;
   }
 }
