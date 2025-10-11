@@ -6,6 +6,7 @@ body {
   color: #333;
 }
 
+/* ШАПКА */
 header {
   background: #222;
   color: #fff;
@@ -17,6 +18,7 @@ header {
   margin: 0 auto;
 }
 
+/* МЕНЮ */
 nav {
   display: flex;
   gap: 15px;
@@ -40,6 +42,7 @@ nav a:hover {
   cursor: pointer;
 }
 
+/* ОСНОВНА ЧАСТИНА */
 main {
   padding: 20px;
   display: flex;
@@ -55,4 +58,56 @@ section {
   padding: 15px;
   flex: 1;
   min-width: 300px;
-  box-shadow: 0 0 10px rgba(0,0,0
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ПІДВАЛ */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+/* 📱 Телефон */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #333;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #444;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+/* 📲 Планшет */
+@media (min-width: 601px) and (max-width: 1024px) {
+  main {
+    flex-direction: column;
+    max-width: 90%;
+  }
+}
