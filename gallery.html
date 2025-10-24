@@ -2,35 +2,47 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Галерея</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Галерея</h1>
-    <nav>
-      <a href="index.html">Головна</a>
-      <a href="about.html">Про мене</a>
-      <a href="services.html">Послуги</a>
-      <a href="gallery.html">Галерея</a>
-      <a href="contact.html">Контакти</a>
-      <a href="blog.html">Блог</a>
-      <a href="facts.html">Цікаві факти</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Моя галерея </h2>
-    <div class="gallery">
+<header>
+  <h1>Галерея</h1>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <nav id="menu">
+    <a href="index.html">Головна</a>
+    <a href="about.html">Про мене</a>
+    <a href="services.html">Послуги</a>
+    <a href="gallery.html">Галерея</a>
+    <a href="contact.html">Контакти</a>
+    <a href="blog.html">Блог</a>
+    <a href="facts.html">Цікаві факти</a>
+  </nav>
+</header>
+
+<main>
+  <section class="gallery">
+    <h2>Моя галерея</h2>
+    <div class="gallery-grid">
       <img src="https://images.ctfassets.net/100cwma5ubtt/1rl5HYTqXKQad7yEQL7mxM/f85c5065b1760e610cf345765f86bb12/FS_1440x810_how-to-introduce-cats-to-each-other.jpg" alt="Фото 1">
       <img src="https://images.contentstack.io/v3/assets/blt6f84e20c72a89efa/bltd23d698154616afc/63c73a89a362596b80751065/img-cat-whiskers-101-header.jpg" alt="Фото 2">
-      <img src="https://lifelineanimal.org/wp-content/uploads/2021/03/foster-cats-header.jpg">
-      <img src="https://tenlives.com.au/wp-content/uploads/2020/09/Problem-Too-Many-Cats-scaled.jpg">
+      <img src="https://lifelineanimal.org/wp-content/uploads/2021/03/foster-cats-header.jpg" alt="Фото 3">
+      <img src="https://tenlives.com.au/wp-content/uploads/2020/09/Problem-Too-Many-Cats-scaled.jpg" alt="Фото 4">
     </div>
-  </main>
+  </section>
+</main>
 
-  <footer>
-    <p>© 2025 Мій сайт</p>
-  </footer>
+<footer>
+  <p>© 2025 Мій сайт</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
