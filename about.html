@@ -2,47 +2,57 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Про мене</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Про мене</h1>
-    <nav>
-      <a href="index.html">Головна</a>
-      <a href="about.html">Про мене</a>
-      <a href="services.html">Послуги</a>
-      <a href="gallery.html">Галерея</a>
-      <a href="contact.html">Контакти</a>
-       <a href="blog.html">Блог</a>
-      <a href="facts.html">Цікаві факти</a>
-    </nav>
-  </header>
 
-  <main>
-    <section>
-      <h2>Хто я?</h2>
-      <p>Привіт! Мене звати Тая. Я цікавлюся веброзробкою та створив цей сайт як навчальний проєкт.</p>
-    </section>
+<header>
+  <h1>Про мене</h1>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <nav id="menu">
+    <a href="index.html">Головна</a>
+    <a href="about.html">Про мене</a>
+    <a href="services.html">Послуги</a>
+    <a href="gallery.html">Галерея</a>
+    <a href="contact.html">Контакти</a>
+    <a href="blog.html">Блог</a>
+    <a href="facts.html">Цікаві факти</a>
+  </nav>
+</header>
 
-    <section>
-      <h2>Мої хобі</h2>
-      <ul>
-        <li>Програмування</li>
-        <li>Подорожі</li>
-        <li>Монтаж</li>
-        <li>Фотографія</li>
-      </ul>
-    </section>
+<main>
+  <section>
+    <h2>Хто я?</h2>
+    <p>Привіт! Мене звати Тая. Я цікавлюся веброзробкою та створила цей сайт як навчальний проєкт.</p>
+  </section>
 
-    <section>
-      <h2>Моя мета</h2>
-      <p>Хочу вдосконалювати навички у веброзробці та створювати корисні сайти, доступні кожному.</p>
-    </section>
-  </main>
+  <section>
+    <h2>Мої хобі</h2>
+    <ul>
+      <li>Програмування</li>
+      <li>Подорожі</li>
+      <li>Монтаж</li>
+      <li>Фотографія</li>
+    </ul>
+  </section>
 
-  <footer>
-    <p>© 2025 Мій сайт</p>
-  </footer>
+  <section>
+    <h2>Моя мета</h2>
+    <p>Хочу вдосконалювати навички у веброзробці та створювати корисні сайти, доступні кожному.</p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Мій сайт</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
